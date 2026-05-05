@@ -2,13 +2,15 @@ DEPENDENCIES
 --------
 * make
 * ngspice
+* sky130 pdk
 * python
     * numpy
     * matplotlib
 
 RUNNING
 ---------
-Run:
+First edit the library directory (change line 3 of the .sp file) to match where
+you installed the sky130 sdk.  Then run:
 
     make
 
