@@ -1,0 +1,29 @@
+DEPENDENCIES
+--------
+* make
+* ngspice
+* python
+    * numpy
+    * matplotlib
+
+RUNNING
+---------
+Run:
+
+    make
+
+View the waveform:
+
+    make view
+
+
+DOCUMENTATION
+---------
+So, basically the goal was to simulate a simple NFET and get a working waveform
+viewer... basically setting up the environment.  This enviroment can hopefully
+be reused for other projects.
+
+The spice netlist has comments to help understand (i still dont know how to read
+netlists quickly lol since the arguments are generally positional.)
+
+The waveform viewer is a simple python script.
