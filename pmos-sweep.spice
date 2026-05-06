@@ -1,0 +1,20 @@
+* PMOS Characteristics curves.
+* Load the library.
+.lib "~/tools/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+* pfet from the sky130 library
+*  d g s b  <- pin order
+X1 d g s s sky130_fd_pr__pfet_01v8 w=1 l=0.15
+*                                  w   l   <- sets the dimensions (in microns)
+
+* biasing sources
+Vdd s 0 1.8
+Vgs g s 0
+Vds d s 0
+
+.control
+    dc Vds 0 -1.8 -0.01 Vgs -0.4 -1.8 -0.2
+    wrdata pmos-curves.dat i(Vds)
+    exit
+.endc
+.end
