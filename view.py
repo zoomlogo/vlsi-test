@@ -1,22 +1,17 @@
 #!/usr/bin/env python
+import sys
 import matplotlib.pyplot as plt
 import numpy as np
 
-nfet_data = np.loadtxt('nmos-curves.dat')
-pfet_data = np.loadtxt('pmos-curves.dat')
+if len(sys.argv) < 2:
+    print("usage: ./view.py [.dat]", file=sys.stderr)
+    exit(1)
 
-plt.figure(figsize=(10, 8))
+data = np.loadtxt(sys.argv[1])
 
-n_Vds = nfet_data[:, 0]
-n_Id = nfet_data[:, 1]
-p_Vds = pfet_data[:, 0]
-p_Id = pfet_data[:, 1]
+x = data[:, 0]
+y = data[:, 1]
 
-plt.plot(n_Vds, n_Id, color='blue', label='NMOS', alpha=0.7)
-plt.plot(p_Vds, p_Id, color='red', label='PMOS', alpha=0.7)
-
-plt.xlabel('Vds (V)')
-plt.ylabel('Id (A)')
-plt.title('NMOS vs PMOS (Id vs Vds)')
+plt.plot(x, y)
 plt.grid(True)
 plt.show()

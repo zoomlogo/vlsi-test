@@ -1,4 +1,10 @@
 #!/usr/bin/env sh
-for netlist in *.spice; do
-    ngspice -b $netlist
+for schem in labs/*.sch; do
+    echo "=> converting $schem"
+    xschem -n -q "$schem" -o netlists
+done
+
+for netlist in netlists/*.spice; do
+    echo "=> simulating $netlist"
+    ngspice -b "$netlist"
 done
