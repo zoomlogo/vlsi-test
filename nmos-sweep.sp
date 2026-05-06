@@ -16,7 +16,7 @@ Vds d 0 1.8
 *       vary Vgs from 0 to 1.8 (step 0.3)
     dc Vds 0 1.8 0.01 Vgs 0 1.8 0.3
 * save:  Vds | i(Vds)  <- i(Vds) is current flowing through the drain
-    wrdata nmos_curves.dat i(Vds)
+    wrdata nmos-curves.dat i(Vds)
 * close program
     exit
 .endc
