@@ -1,4 +1,4 @@
-SOURCE := nmos-sweep.sp
+SOURCE := nmos-sweep.spice
 
 run:
 	ngspice -b $(SOURCE)
