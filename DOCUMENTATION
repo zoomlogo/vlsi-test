@@ -12,5 +12,7 @@ The waveform viewer is a simple python script.
 Updates
 =======
 
+* Start using xschem and made a basic current mirror.
+
 * Added PMOS simulation.  Note that the I_D for PMOS is less than that of NMOS
   for the same value of V_DS.  Why?
