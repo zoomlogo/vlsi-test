@@ -1,13 +1,9 @@
 DEPENDENCIES
---------
-* ngspice
-* sky130 pdk
-* python
-    * numpy
-    * matplotlib
+------------
+Read docs/source/setup.rst to setup the environment.
 
 RUNNING
----------
+-------
 First edit the library directory (change line 3 of the .sp file) to match where
 you installed the sky130 sdk.  Then run:
 
@@ -20,7 +16,7 @@ View the waveform:
 
 DOCUMENTATION
 ---------
-Read DOCUMENTATION.
+Read docs/DOCUMENTATION.
 
 COPYING
 ---------
