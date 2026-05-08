@@ -17,6 +17,8 @@ The waveform viewer is a simple python script.
 Updates
 -------
 
+* Made a CMOS inverter.
+
 * Start using xschem and made a basic current mirror.
 
 * Added PMOS simulation.  Note that the :math:`I_D` for PMOS is less than that
