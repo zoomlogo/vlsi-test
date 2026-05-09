@@ -1,16 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1778372363
-<< error_p >>
-rect 45 975 105 981
-rect 45 927 51 975
-rect 99 927 105 975
-rect 45 921 105 927
-rect 45 124 105 130
-rect 45 76 51 124
-rect 99 76 105 124
-rect 45 70 105 76
+timestamp 1778382317
 << nwell >>
 rect -40 560 340 1342
 << nmos >>
@@ -18,26 +9,80 @@ rect 135 0 165 200
 << pmos >>
 rect 135 600 165 1302
 << ndiff >>
-rect 0 0 135 200
-rect 165 0 300 200
+rect 0 130 135 200
+rect 0 70 45 130
+rect 105 70 135 130
+rect 0 0 135 70
+rect 165 130 300 200
+rect 165 70 195 130
+rect 255 70 300 130
+rect 165 0 300 70
 << pdiff >>
-rect 0 600 135 1302
-rect 165 600 300 1302
+rect 0 981 135 1302
+rect 0 921 45 981
+rect 105 921 135 981
+rect 0 600 135 921
+rect 165 981 300 1302
+rect 165 921 195 981
+rect 255 921 300 981
+rect 165 600 300 921
+<< ndiffc >>
+rect 45 70 105 130
+rect 195 70 255 130
+<< pdiffc >>
+rect 45 921 105 981
+rect 195 921 255 981
 << poly >>
 rect 135 1302 165 1382
 rect 135 200 165 600
 rect 135 -80 165 0
+<< locali >>
+rect 25 981 125 1001
+rect 25 921 45 981
+rect 105 921 125 981
+rect 25 901 125 921
+rect 175 981 275 1001
+rect 175 921 195 981
+rect 255 921 275 981
+rect 175 901 275 921
+rect 25 130 125 150
+rect 25 70 45 130
+rect 105 70 125 130
+rect 25 50 125 70
+rect 175 130 275 150
+rect 175 70 195 130
+rect 255 70 275 130
+rect 175 50 275 70
 << viali >>
 rect 45 921 105 981
 rect 195 921 255 981
 rect 45 70 105 130
 rect 195 70 255 130
 << metal1 >>
+rect -300 1500 600 1600
+rect 15 981 135 1500
+rect 15 921 45 981
+rect 105 921 135 981
+rect 15 891 135 921
 rect 165 981 285 1012
 rect 165 921 195 981
 rect 255 921 285 981
+rect 15 130 135 160
+rect 15 70 45 130
+rect 105 70 135 130
+rect 15 -200 135 70
 rect 165 130 285 921
 rect 165 70 195 130
 rect 255 70 285 130
 rect 165 40 285 70
+rect -300 -300 600 -200
+<< labels >>
+rlabel metal1 165 130 285 921 1 output
+port 1 n
+rlabel poly 135 200 165 600 1 input
+port 2 n
+rlabel metal1 -300 1500 600 1600 1 VDD
+port 3 n
+rlabel metal1 -300 -300 600 -200 1 GND
+port 4 n
 << end >>

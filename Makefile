@@ -1,4 +1,4 @@
-all: mirror-curves.dat nmos-curves.dat pmos-curves.dat inverter-curves.dat
+all: mirror-curves.dat nmos-curves.dat pmos-curves.dat inverter-curves.dat inverter-testbench-curves.dat
 
 # SPICE simulations.
 mirror-curves.dat: netlists/current-mirror.spice
@@ -11,6 +11,9 @@ pmos-curves.dat: netlists/pmos-sweep.spice
 	ngspice -b $<
 
 inverter-curves.dat: netlists/cmos-inverter.spice
+	ngspice -b $<
+
+inverter-testbench-curves.dat: netlists/cmos-inverter-testbench.spice
 	ngspice -b $<
 
 # Netlist generations.
