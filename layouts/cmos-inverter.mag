@@ -1,13 +1,43 @@
 magic
 tech sky130A
-timestamp 1778371307
+magscale 1 2
+timestamp 1778372099
 << error_p >>
-rect -18 651 168 669
-rect -18 300 0 651
-rect 150 300 168 651
-rect -18 282 168 300
+rect 45 975 105 981
+rect 45 927 51 975
+rect 99 927 105 975
+rect 45 921 105 927
+rect 195 975 255 981
+rect 195 927 201 975
+rect 249 927 255 975
+rect 195 921 255 927
+rect 45 124 105 130
+rect 45 76 51 124
+rect 99 76 105 124
+rect 45 70 105 76
+rect 195 124 255 130
+rect 195 76 201 124
+rect 249 76 255 124
+rect 195 70 255 76
+<< nwell >>
+rect -40 560 340 1342
+<< nmos >>
+rect 135 0 165 200
+<< pmos >>
+rect 135 600 165 1302
 << ndiff >>
-rect 0 0 150 100
+rect 0 0 135 200
+rect 165 0 300 200
 << pdiff >>
-rect 0 300 150 651
+rect 0 600 135 1302
+rect 165 600 300 1302
+<< poly >>
+rect 135 1302 165 1382
+rect 135 200 165 600
+rect 135 -80 165 0
+<< viali >>
+rect 45 921 105 981
+rect 195 921 255 981
+rect 45 70 105 130
+rect 195 70 255 130
 << end >>
