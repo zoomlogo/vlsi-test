@@ -1,0 +1,13 @@
+magic
+tech sky130A
+timestamp 1778371307
+<< error_p >>
+rect -18 651 168 669
+rect -18 300 0 651
+rect 150 300 168 651
+rect -18 282 168 300
+<< ndiff >>
+rect 0 0 150 100
+<< pdiff >>
+rect 0 300 150 651
+<< end >>
