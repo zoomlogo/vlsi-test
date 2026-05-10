@@ -4,14 +4,17 @@ Read docs/source/setup.rst to setup the environment.
 
 RUNNING
 -------
-First edit the library directory (change line 3 of the .sp file) to match where
-you installed the sky130 sdk.  Then run:
+Ensure the PDK is installed into ~/tools/pdk.  Or else just change all instances
+of ~/tools/pdk to your $PDK_ROOT.  (I could have made this easier for you to set
+up but this is a lazy repository.)
 
-    ./run.sh
+To run and simulate everything:
+    make
 
-View the waveform:
-
-    ./view.py
+To view waveforms:
+    ./view-inverter.py
+    ./view.py <.dat file>
+    ./view-transient.py inverter-testbench-curves.dat
 
 
 DOCUMENTATION

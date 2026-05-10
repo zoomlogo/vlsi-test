@@ -18,9 +18,9 @@ inverter-testbench-curves.dat: netlists/cmos-inverter-testbench.spice
 
 # Netlist generations.
 netlists/current-mirror.spice: labs/current-mirror.sch
-	xschem -n -q $< -o netlists
+	xschem -x -n -q $< -o netlists
 
 netlists/cmos-inverter.spice: labs/cmos-inverter.sch
-	xschem -n -q $< -o netlists
+	xschem -x -n -q $< -o netlists
 
 .PHONY: all
