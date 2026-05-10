@@ -5,17 +5,13 @@
 
 vlsi-test documentation
 =======================
-So, basically the goal was to simulate a simple NFET and get a working waveform
-viewer... basically setting up the environment.  This enviroment can hopefully
-be reused for other projects.
-
-The basic spice netlist has comments to help understand. (I still dont know how
-to read netlists quickly since the arguments are generally positional.)
-
-The waveform viewer is a simple python script.
+The goal here was to get started on VLSI design and simulation and document my
+process to make it reproducible for others (hopefully).
 
 Updates
 -------
+
+* Layout the CMOS inverter using magic and extract parasitics and simulate them.
 
 * Made a CMOS inverter.
 
@@ -30,3 +26,4 @@ Updates
 
    setup
    current-mirror
+   cmos-inverter

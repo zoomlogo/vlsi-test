@@ -37,15 +37,64 @@ channel.  Now we use a layer of polysilion on the channel which forms the gate.
 
 PMOS
 ~~~~
+Similarily to make a p-channel MOSFET, we need to make a p-channel using p type
+silicon.  However since the substrate is already p-type, making it directly can
+cause issues, so we need to isolate the p-channel using an n-type doped region
+called n-well.  Now we can make the p-channel and use polysilicon again as the
+gate.
 
 Vias
 ~~~~
+Metal interconnects are connected to the doped silicon layers underneath using
+vias.  The layer order is as follows::
+
+    metal1 -> viali -> locali -> [np]dconnect -> [np]-diffused
 
 Using Magic
 -----------
+Magic is a VLSI layout tool based.  The primitive in magic, is the box.  It is
+an axis aligned box, in which layers can be painted in.  It automatically detects
+the layers (as transistors) and can identify connections.  It can then extract
+parasitics and form netlists.
+
+Magic is very keyboard focused.  For example, ``s`` selects the region as a box.
+
+Labels and ports
+~~~~~~~~~~~~~~~~
+Magic uses labels to label a node in the netlist.  It uses ports to determine
+the input and output of the layout.  The ports are used to denote the external
+connections.
+
+Magic automatically labels entire separate regions with the same label, if it can
+determine if they are electrically connected or not.  In my initial trial, magic
+didn't label the ``output`` and the power ports properly because I didn't make
+the vias properly.
 
 Extracting parasitics
 =====================
+After the layout is done, magic can export a ``.ext`` file which contains all
+information about the parasitics about the layout.  For example it computes all
+the resistances, capacitances, inductances and exports it.  It then can generate
+a ``subckt`` netlist from this file which can then be tested.
 
 Results
 -------
+Since this was my first layout, and I made it in about an hour, I didn't expect
+good results.  Here is the output of the inverter in response to a square wave
+input.
+
+.. image:: ./inverter-curves.png
+
+Zooming into one of the rising edges of the clocks, you can clearly see that the
+output doesn't change immediately as soon as the input crosses the
+:math:`0.9\,\mathrm{V}` threshold.  It takes time to do so, it is because of the
+capacitance.
+
+.. image:: ./inverter-switching-time.png
+
+The output also overshoots :math:`1.8\,\mathrm{V}` because of capacitive
+effects.
+
+Conclusion
+==========
+That about concludes my VLSI experimentation for now.

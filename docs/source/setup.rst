@@ -6,10 +6,12 @@ Dependencies
 ------------
 The project requires the following tools to be present:
 
+* gnu make
 * Python with the libraries:
 
   * numpy
   * matplotlib
+  * sphnix (only for generating the documentation)
 * ngspice.
 * xschem.
 * magic.
